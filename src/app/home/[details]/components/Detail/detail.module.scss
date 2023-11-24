@@ -1,0 +1,10 @@
+.title{
+    font-size: xx-large;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 599px) {
+        font-size: 2rem;
+        color: red
+    
+    }
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "id":"0001",
+        "title": "5G En Casa",
+        "description": "Descubra cómo 5G está impulsando la próxima generación de banda ancha inalámbrica y conectando comunidades en todo el país.",
+        "image": "/casa.PNG",
+        "date": 1700691184
+    },
+    {
+        "id":"0002",
+        "title": "Affordable Connectivity Program (ACP)",
+        "description": "Los clientes elegibles para ACP obtienen Internet residencial de Verizon gratis con el programa Verizon Forward..",
+        "image":  "/trabajo.PNG",
+        "date": 1700691184
+    },
+    {
+        "id":"0003",
+        "title": "Small Business Digital Ready",
+        "description": "Ayudando a hacer avanzar a un millón de pequeñas empresas.",
+        "image":  "/equipo.PNG",
+        "date": 1700691184
+    }
+]
