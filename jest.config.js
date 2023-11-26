@@ -1,19 +1,14 @@
-// jest.config.js
-module.exports = {
-  testEnvironment: "jsdom",
-  rootDir: "src/app",
-  transform: {
-    "^.+\\.(j|t)sx?$": "babel-jest",
-  },
-  transformIgnorePatterns: ["../node_modules/(?!@kushki)"],
-  moduleNameMapper: {
-    "\\.(css)$": "identity-obj-proxy",
-    "\\.(png)$": "identity-obj-proxy",
-    "\\.(svg)$": "identity-obj-proxy",
-  },
-  setupFilesAfterEnv: [
-    "../node_modules/@testing-library/jest-dom/dist/index.js",
-  ],
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/node_modules/@testing-library/jest-dom/dist/index.js'],
+  testEnvironment: 'jest-environment-jsdom',
+  collectCoverageFrom: ["./**/*.{ts,tsx}"],
+  coverageDirectory: "../coverage",
   coverageThreshold: {
     global: {
       branches: 79, // temp
@@ -22,10 +17,17 @@ module.exports = {
       statements: 85, // temp
     },
   },
-  coverageDirectory: "../coverage",
-  collectCoverageFrom: ["./**/*.{ts,tsx}"],
-  setupFiles: ["../jest.global.jsx"],
   coveragePathIgnorePatterns: [
-    "src/app",
+    "/node_modules/",
+    "src/react-app-env.d.ts",
+    "src/app/root.component.tsx",
+    "src/app/shared",
+    ".module.scss",
+    "tailwind.config.ts",
+    "/.next/",
+    "app/layout",
+    "app/page"
   ],
-};
+}
+
+module.exports = createJestConfig(customJestConfig)

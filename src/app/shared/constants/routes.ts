@@ -2,9 +2,6 @@ export const ROUTES = {
     HOME: "/",
     ABOUT: "/home/about",
     BLOG_DETAILS: "/"
-
-
-
 }
 
 export const PAGE_NAME = {

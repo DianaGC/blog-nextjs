@@ -1,4 +1,6 @@
-import AboutDetail from "./components/AboutMe/About"
+import React from "react"
+import AboutDetail from "./components/About/About"
+
 const About = () => {
     return(
         <div className="p-6">

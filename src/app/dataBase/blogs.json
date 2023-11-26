@@ -19,5 +19,12 @@
         "description": "Ayudando a hacer avanzar a un millón de pequeñas empresas.",
         "image":  "/equipo.PNG",
         "date": 1700691184
+    },
+    {
+        "id":"0004",
+        "title": "Small Business Digital Ready",
+        "description": "Ayudando a hacer avanzar a un millón de pequeñas empresas.",
+        "image":  "/equipo.PNG",
+        "date": 1700691184
     }
 ]

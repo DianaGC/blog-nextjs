@@ -1,5 +1,9 @@
 export interface IUseBlogStateProps {
     blogs: IBlog[]  | [];
+    setBlogs?:   () => void;
+    handleSearchBlog: (
+        event: { target: { value: string } } | any
+      ) => void;
 }
 
 export interface IBlog {

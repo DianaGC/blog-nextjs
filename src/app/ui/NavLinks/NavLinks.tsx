@@ -1,9 +1,7 @@
-import { LinkIcon } from "@heroicons/react/20/solid";
 import { UserGroupIcon, HomeIcon, DocumentIcon } from "@heroicons/react/24/outline";
-import { link } from "fs";
 import Link from "next/link";
 import { ROUTES, PAGE_NAME } from "../../shared/constants/routes"
-import styles from "./navLinks.module.scss"
+import React from "react";
 
 const links = [
     { name: PAGE_NAME.HOME, href: ROUTES.HOME, icon: HomeIcon },

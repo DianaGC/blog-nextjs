@@ -3,4 +3,5 @@ export interface ICard {
     description: string,
     date?: string,
     image?: string,
+    id? : string
 }

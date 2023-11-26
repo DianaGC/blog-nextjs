@@ -1,15 +1,13 @@
-import { IBlog } from "@/app/home/components/home/state/useBlogState.interfaces";
+import { IBlog } from "@/app/home/components/Home/state/useBlogState.interfaces";
 import { IUseDetailStateProps } from "./useDetail.interfaces";
 import { useEffect, useState } from "react";
-import { getBlogDetail } from "@/app/lib/data";
+import { getBlogDetail } from "@/app/lib/api";
 
 export const useDetailState = (id: string): IUseDetailStateProps =>{
     const[blogDetail, setBlogDetail] = useState<IBlog >()
-    console.log(id)
 
     useEffect(()=>{
         const blog = getBlogDetail(id);
-        console.log(blog)
         setBlogDetail(blog);
     }, [])
 

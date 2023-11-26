@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import './styles.css';
-import NavLinks from './components/NavLinks/NavLinks';
+import NavLinks from './ui/NavLinks/NavLinks';
 import { UserGroupIcon, HomeIcon, DocumentIcon } from "@heroicons/react/24/outline";  
 import Link from 'next/link';
 

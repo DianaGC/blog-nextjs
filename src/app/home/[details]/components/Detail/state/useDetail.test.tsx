@@ -1,15 +1,15 @@
 import { renderHook } from "@testing-library/react-hooks";
-import { useBlogState } from "./useBlogState";
+import { useDetailState } from "./useDetailState";
 
 describe("useBlogState test", () => {
     const renderCustomHook = () =>
       renderHook(() =>
-      useBlogState()
+      useDetailState("001")
       );
   
-    it("When custome hook is called then retun list of blogs ", () => {
+    it("When custome hook is called then retun a blog ", () => {
       const { result } = renderCustomHook();
-      expect(result.current.blogs).toHaveLength;
+      expect(result.current.blog).toHaveLength;
     });
    
   });

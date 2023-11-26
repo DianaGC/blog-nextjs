@@ -2,9 +2,17 @@
     font-size: xx-large;
     align-items: center;
     text-align: center;
+    color: darkgoldenrod;
+
     @media (max-width: 599px) {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: red
     
     }
+}
+
+.author{
+    text-align: end;
+    margin: 2px;
+    color: #808088
 }

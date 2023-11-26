@@ -1,6 +1,6 @@
 
-import { getBlogs } from "@/app/lib/data";
-import { IBlog, IUseBlogStateProps } from "./useBlogState.interfaces";
+import { getBlogs, searchBlog } from "@/app/lib/api";
+import { IBlog, IUseBlogStateProps } from "./useBlogState.interfaces"
 import { useEffect, useState } from "react";
 
 export const useBlogState = ():IUseBlogStateProps =>{
@@ -8,13 +8,14 @@ export const useBlogState = ():IUseBlogStateProps =>{
    
 
     useEffect(()=>{
-        const blogs = getBlogs();
-        setBlogs(blogs);
+        setBlogs(getBlogs());
     }, [])
 
+    const handleSearchBlog = (event: {target: {value:string}}) =>  setBlogs(searchBlog(event.target.value))
+    
     return {
-        blogs
+        blogs,
+        handleSearchBlog
     }
-
 
 }
